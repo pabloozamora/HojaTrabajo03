@@ -15,7 +15,7 @@ public class Sort<T> {
 		return max;
 	}
 	
-	public Integer[] radix_orderByDigit(Integer[] elements, int exp) {
+	private Integer[] radix_orderByDigit(Integer[] elements, int exp) {
 		
 		Integer[][] numbersByDigit = new Integer[10][10];
 		Integer[] count = new Integer[10];
@@ -59,13 +59,4 @@ public class Sort<T> {
 		return elements;
 	}
 	
-	public static void main(String[] args) {
-		Integer[] hola = {0, 0, 425, 1,  56, 24, 0, 1, 5};
-		Sort<Object> sort = new Sort<Object>(null);
-		var result = sort.radixSort(hola);
-		
-		for(int n: result) {
-			System.out.println(n);
-		}
-	}
 }
