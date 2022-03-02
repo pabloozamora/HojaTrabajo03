@@ -17,7 +17,7 @@ public class Sort<T> {
 	
 	private Integer[] radix_orderByDigit(Integer[] elements, int exp) {
 		
-		Integer[][] numbersByDigit = new Integer[10][10];
+		Integer[][] numbersByDigit = new Integer[10][elements.length];
 		Integer[] count = new Integer[10];
 		Integer[] output = new Integer[elements.length];
 		
@@ -50,6 +50,8 @@ public class Sort<T> {
 	
 
 	public Integer[] radixSort(Integer[] elements) {
+		
+		if(elements == null || elements.length == 0) return null;
 		int max = getMaxNumber(elements);
 		
 		//aumentar potencia de 10
