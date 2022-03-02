@@ -46,4 +46,20 @@ public class Sort <T> {
 	    quickSort(myArray, inf, i - 1);
 	    quickSort(myArray, i + 1, sup);
     }
+
+    public void gnomeSort(T[] myArray, int size){
+        int index = 0;
+        while (index < size){
+            if (index == 0) index++;
+            if (comparador.Compare(myArray[index], myArray[index - 1]) > 0){
+                index++;
+            }
+            else{
+                T temp = myArray[index];
+                myArray[index] = myArray[index-1];
+                myArray[index-1] = temp;
+                index--;
+            }
+        }
+    }
 }
