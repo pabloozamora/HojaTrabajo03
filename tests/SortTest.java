@@ -8,7 +8,7 @@ import src.*;
 
 class SortTest {
 
-	/*@Test
+	@Test
 	void testBubbleSort() {
 		Sort comparador = new Sort(new CompareInt());
 		Integer[] arreglo = new Integer[] {4,12,7,8,26,55,21}; //4,7,8,12,21,26,55
@@ -48,7 +48,7 @@ class SortTest {
 		assertEquals(arreglo[4], 21);
 		assertEquals(arreglo[5], 26);
 		assertEquals(arreglo[6], 55);
-	}*/
+	}
 	
 	@Test
 	void testMergeSort() {
